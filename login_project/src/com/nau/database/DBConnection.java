@@ -10,7 +10,7 @@ public class DBConnection {
 		
 		String url = "jdbc:mysql://localhost:3306/";
 		String database = "priyanka_ey";
-		String user = "priyanka";
+		String user = "root";
 		String password = "priyanka";
 		try {
 			connection = DriverManager.getConnection(url+database, user, password);

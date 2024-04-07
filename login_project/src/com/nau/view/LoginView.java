@@ -16,11 +16,15 @@ public class LoginView {
 		Integer userId = input.nextInt();
 		System.out.println("Enter Password: ");
 		String password = input.next();
+		System.out.println("Enter Fname:");
+		String fname=input.next();
+		System.out.println("Enter Lname:");
+		String lname=input.next();
 		System.out.println(userId + " " + password); // logged
-		Login login1 = new Login(userId, password,"naushad","akhtar");
-		Login login2 = new Login(121, password,"naushad","akhtar");
+		Login login1 = new Login(userId, password,fname,lname);
+		//Login login2 = new Login(121, password,"naushad","akhtar");
 		LoginService loginService = new LoginServiceImpl();
-		int count = loginService.addUser(login1,login2);
+		int count = loginService.addUser(login1);
 		System.out.println("Total Saved " + count);
 ;	}
 }
